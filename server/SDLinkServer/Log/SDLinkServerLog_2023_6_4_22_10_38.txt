@@ -1,2 +1,0 @@
-[22:10:40] Start Local Server..(Port : 7860)
-[22:10:52] Close All..

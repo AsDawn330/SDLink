@@ -1,2 +1,0 @@
-[15:6:1] Start Local Server..(Port : 9652)
-[15:6:2] Close All..

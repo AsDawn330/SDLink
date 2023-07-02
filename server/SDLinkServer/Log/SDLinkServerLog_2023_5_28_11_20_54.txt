@@ -1,5 +1,0 @@
-[11:20:56] Start Local Server..(Port : 9652)
-[11:21:3] Start NatApp..(DN : http://qxknfv.natappfree.cc)
-[11:21:24] Close All..
-[11:21:29] Start Local Server..(Port : 9652)
-[11:21:33] Start NatApp..(DN : http://cyt8nd.natappfree.cc)
