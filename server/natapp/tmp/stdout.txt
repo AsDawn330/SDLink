@@ -1,15 +1,4 @@
-[06/24/23 11:53:16] [INFO] [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
-[06/24/23 11:53:16] [INFO] [view] [web] Serving web interface on 127.0.0.1:4040
-[06/24/23 11:53:16] [INFO] [client] Authenticated with server, client id: 7bf6656df624f70190d422ee8eaea323
-[06/24/23 11:53:16] [INFO] [client] Tunnel established at http://97kx67.natappfree.cc
-[06/24/23 11:53:55] [WARN] [pxy:8e4ac4c] Failed to open private leg 127.0.0.1:7860: dial tcp 127.0.0.1:7860: connectex: No connection could be made because the target machine actively refused it.
-[06/24/23 11:53:57] [WARN] [pxy:5c653510] Failed to open private leg 127.0.0.1:7860: dial tcp 127.0.0.1:7860: connectex: No connection could be made because the target machine actively refused it.
-[06/24/23 11:56:05] [EROR] [pxy:7d14b7fd] Server failed to write StartProxy: local error: tls: bad record MAC
-[06/24/23 11:56:07] [WARN] [pxy:49bb9339] Failed to open private leg 127.0.0.1:7860: dial tcp 127.0.0.1:7860: connectex: No connection could be made because the target machine actively refused it.
-[06/24/23 11:56:09] [WARN] [pxy:1cd1baa8] Failed to open private leg 127.0.0.1:7860: dial tcp 127.0.0.1:7860: connectex: No connection could be made because the target machine actively refused it.
-[06/24/23 11:56:29] [INFO] [prv:5fc916e4] Joined with connection pxy:6a496179
-[06/24/23 11:56:29] [INFO] [prv:48e094f1] Joined with connection pxy:4eece907
-[06/24/23 11:56:38] [INFO] [prv:e9601a0] Joined with connection pxy:e3dc791
-[06/24/23 11:56:38] [INFO] [prv:64effdf9] Joined with connection pxy:4e431e62
-[06/24/23 11:56:51] [INFO] [prv:55e9a96a] Joined with connection pxy:581ac211
-[06/24/23 11:57:01] [INFO] [prv:5d88bd04] Joined with connection pxy:1517df8
+[07/02/23 19:28:29] [INFO] [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
+[07/02/23 19:28:29] [INFO] [view] [web] Serving web interface on 127.0.0.1:4040
+[07/02/23 19:28:30] [INFO] [client] Authenticated with server, client id: 1c685532809649ba3452c7303957bd87
+[07/02/23 19:28:30] [INFO] [client] Tunnel established at http://nibfhv.natappfree.cc

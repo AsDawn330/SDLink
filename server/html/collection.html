@@ -4,16 +4,71 @@
 <head>
 	<meta charset="utf-8">
 	<title>Collection</title>
-	<link rel="stylesheet" type="text/css" href="style/CollectionStyle.css">
+	<script type="text/javascript" src="/scripts/sdlink_html_api.js"></script>
+    <script type="text/javascript" src="/eel.js"></script>
 </head>
 <body>
-    <div class="collection">
-        <span>
-            <p>sss</p>
-        </span>
-        <br> 
-        <span>
-            <p>sss</p>
-        </span>
-    </div>
+    <p id="back_ctrl">
+        <input type="button" value="Back Up" onclick="back_up_to_last()">
+    </p>
+    <p id="main_list"></p>
+    <script>
+        <!--running func with html here--> 
+        let current_path = "E:\\"
+
+        function back_up_to_last(){
+            last_index = current_path.lastIndexOf("/")
+            if(last_index>0){
+                current_path = current_path.substr(0,last_index)
+                document.getElementById("main_list").innerHTML = ""
+                let content = list_dir_content(current_path)
+                content.then((result) =>{
+                    for(let key in result){
+                        var oBtn = document.createElement("input");
+                        oBtn.id = "btn";
+                        oBtn.type = "button";
+                        oBtn.value = result[key]
+                        oBtn.linkpath = current_path+"/"+result[key]
+                        oBtn.addEventListener('click',print_dir_to_list.bind(oBtn,oBtn.linkpath))
+                        document.getElementById("main_list").appendChild(oBtn)
+                    }
+                })
+            }
+            
+        }
+
+        function print_dir_to_list(path,event){
+            current_path = path
+            console.log(path)
+            console.log("print content of " + current_path + " to list")
+            document.getElementById("main_list").innerHTML = ""
+            let content = list_dir_content(path)
+            content.then((result) =>{
+            for(let key in result){
+                    var oBtn = document.createElement("input");
+                    oBtn.id = "btn";
+                    oBtn.type = "button";
+                    oBtn.value = result[key]
+                    oBtn.linkpath = current_path+"/"+result[key]
+                    oBtn.addEventListener('click',print_dir_to_list.bind(oBtn,oBtn.linkpath))
+                    document.getElementById("main_list").appendChild(oBtn)
+                }
+            })
+        }
+        
+        let content = list_dir_content(current_path)
+        content.then((result) =>{
+            for(let key in result){
+                    var oBtn = document.createElement("input");
+                    oBtn.id = "btn";
+                    oBtn.type = "button";
+                    oBtn.value = result[key]
+                    oBtn.linkpath = current_path+"/"+result[key]
+                    oBtn.addEventListener('click',print_dir_to_list.bind(oBtn,oBtn.linkpath))
+                    document.getElementById("main_list").appendChild(oBtn)
+                }
+            })
+        
+
+    </script>
 </body>
