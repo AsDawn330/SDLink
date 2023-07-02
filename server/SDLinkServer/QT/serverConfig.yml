@@ -1,0 +1,3 @@
+HttpdPath: E:\SDLink\server\httpd-2.4.55-o111s-x86-vs17\Apache24\bin
+LocalPort: 7860
+NatAppPath: E:\SDLink\server\natapp
