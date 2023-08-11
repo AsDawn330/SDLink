@@ -21,6 +21,14 @@ class sd_requests:
         except:
             print('[Error]: Failed to get sd models from ' + get_url)
 
+    def txt2img(self,settings):
+        post_url = self.url + '/sdapi/v1/txt2img'
+        try:
+            r = requests.post(post_url,data=json.dumps(settings))
+            return r.text
+        except:
+            print('[Error]: Failed to run txt2img in ' + post_url)
+
 if __name__ == '__main__':
     sdr = sd_requests('127.0.0.1:7860')
     modeltxt = sdr.get_sd_models()
