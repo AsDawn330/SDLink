@@ -1,4 +1,0 @@
-[07/02/23 19:28:29] [INFO] [client] Trusting root CAs: [assets/client/tls/ngrokroot.crt]
-[07/02/23 19:28:29] [INFO] [view] [web] Serving web interface on 127.0.0.1:4040
-[07/02/23 19:28:30] [INFO] [client] Authenticated with server, client id: 1c685532809649ba3452c7303957bd87
-[07/02/23 19:28:30] [INFO] [client] Tunnel established at http://nibfhv.natappfree.cc
