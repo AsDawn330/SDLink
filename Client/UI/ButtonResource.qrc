@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="BUttonIcon">
+    <file>Icon/Icon_Home.png</file>
+    <file>Icon/Icon_Library.png</file>
+    <file>Icon/Icon_Settings.png</file>
+    <file>Icon/Icon_User.png</file>
+  </qresource>
+</RCC>
