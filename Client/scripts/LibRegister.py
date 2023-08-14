@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import base64
 
 class sd_link_lib:
     def __init__(self,path):
@@ -26,6 +27,9 @@ class sd_link_lib:
 if __name__ == '__main__':
     sdlb = sd_link_lib('E:/tmp')
     testLib = sdlb.Read_Collection_From_Json(sdlb.Collections[0])
-    print(len(testLib['images']))
-    for img in testLib['images']:
-        print(img)
+    b = str.encode(testLib['images'][0])
+    print(type(b))
+    imgdata = base64.b64decode(b)
+    with open("E:/temp.jpg", 'wb') as f:
+        f.write(imgdata)
+
