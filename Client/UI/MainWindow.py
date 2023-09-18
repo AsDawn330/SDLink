@@ -11,65 +11,106 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_MainWindow_SDLink(object):
+    def setupUi(self, MainWindow_SDLink):
+        MainWindow_SDLink.setObjectName("MainWindow_SDLink")
+        MainWindow_SDLink.resize(990, 600)
+        MainWindow_SDLink.setWindowOpacity(1.0)
+        MainWindow_SDLink.setUnifiedTitleAndToolBarOnMac(False)
+        self.centralwidget = QtWidgets.QWidget(MainWindow_SDLink)
         self.centralwidget.setObjectName("centralwidget")
-        self.widget = QtWidgets.QWidget(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(0, 0, 141, 601))
-        self.widget.setStyleSheet("QWidget{\n"
-"    background-color:qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(250, 202, 14, 255), stop:1 rgba(246, 80, 30, 255))\n"
-"}")
-        self.widget.setObjectName("widget")
-        self.layoutWidget = QtWidgets.QWidget(self.widget)
-        self.layoutWidget.setGeometry(QtCore.QRect(6, 20, 131, 221))
-        self.layoutWidget.setObjectName("layoutWidget")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget)
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.pushButton_HomePage = QtWidgets.QPushButton(self.layoutWidget)
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(20, 20, 160, 220))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout_SideButton = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout_SideButton.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_SideButton.setObjectName("verticalLayout_SideButton")
+        self.pushButton_HomePage = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.pushButton_HomePage.setMinimumSize(QtCore.QSize(0, 50))
         self.pushButton_HomePage.setStyleSheet("image: url(:/BUttonIcon/Icon/Icon_Home.png);")
         self.pushButton_HomePage.setText("")
         self.pushButton_HomePage.setFlat(True)
         self.pushButton_HomePage.setObjectName("pushButton_HomePage")
-        self.verticalLayout.addWidget(self.pushButton_HomePage)
-        self.pushButton_UserInterface = QtWidgets.QPushButton(self.layoutWidget)
+        self.verticalLayout_SideButton.addWidget(self.pushButton_HomePage)
+        self.pushButton_UserInterface = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.pushButton_UserInterface.setMinimumSize(QtCore.QSize(0, 50))
         self.pushButton_UserInterface.setStyleSheet("image: url(:/BUttonIcon/Icon/Icon_User.png);")
         self.pushButton_UserInterface.setText("")
         self.pushButton_UserInterface.setFlat(True)
         self.pushButton_UserInterface.setObjectName("pushButton_UserInterface")
-        self.verticalLayout.addWidget(self.pushButton_UserInterface)
-        self.pushButton_Library = QtWidgets.QPushButton(self.layoutWidget)
+        self.verticalLayout_SideButton.addWidget(self.pushButton_UserInterface)
+        self.pushButton_Library = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.pushButton_Library.setMinimumSize(QtCore.QSize(0, 50))
         self.pushButton_Library.setStyleSheet("image: url(:/BUttonIcon/Icon/Icon_Library.png);")
         self.pushButton_Library.setText("")
         self.pushButton_Library.setFlat(True)
         self.pushButton_Library.setObjectName("pushButton_Library")
-        self.verticalLayout.addWidget(self.pushButton_Library)
-        self.pushButton_Settings = QtWidgets.QPushButton(self.layoutWidget)
+        self.verticalLayout_SideButton.addWidget(self.pushButton_Library)
+        self.pushButton_Settings = QtWidgets.QPushButton(self.verticalLayoutWidget)
         self.pushButton_Settings.setMinimumSize(QtCore.QSize(0, 50))
         self.pushButton_Settings.setStyleSheet("image: url(:/BUttonIcon/Icon/Icon_Settings.png);")
         self.pushButton_Settings.setText("")
         self.pushButton_Settings.setFlat(True)
         self.pushButton_Settings.setObjectName("pushButton_Settings")
-        self.verticalLayout.addWidget(self.pushButton_Settings)
-        self.widget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.widget_2.setGeometry(QtCore.QRect(140, 0, 661, 601))
-        self.widget_2.setStyleSheet("QWidget{\n"
+        self.verticalLayout_SideButton.addWidget(self.pushButton_Settings)
+        self.label_SideBackGround = QtWidgets.QLabel(self.centralwidget)
+        self.label_SideBackGround.setGeometry(QtCore.QRect(0, 0, 211, 601))
+        self.label_SideBackGround.setStyleSheet("QLabel{\n"
+"background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:1, y2:1, stop:0 rgba(250, 202, 14, 255), stop:1 rgba(246, 80, 30, 255));\n"
+"}\n"
+"")
+        self.label_SideBackGround.setText("")
+        self.label_SideBackGround.setObjectName("label_SideBackGround")
+        self.label_MainBackGround = QtWidgets.QLabel(self.centralwidget)
+        self.label_MainBackGround.setGeometry(QtCore.QRect(210, 0, 781, 601))
+        self.label_MainBackGround.setStyleSheet("QLabel{\n"
 "    background-color: rgb(0, 0, 0);\n"
 "}\n"
 "")
-        self.widget_2.setObjectName("widget_2")
-        MainWindow.setCentralWidget(self.centralwidget)
+        self.label_MainBackGround.setText("")
+        self.label_MainBackGround.setObjectName("label_MainBackGround")
+        self.pushButton_Close = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_Close.setGeometry(QtCore.QRect(950, 10, 31, 31))
+        font = QtGui.QFont()
+        font.setFamily("Cascadia Mono")
+        font.setPointSize(15)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_Close.setFont(font)
+        self.pushButton_Close.setStyleSheet("QPushButton{\n"
+"background-color: rgb(248, 135, 23);\n"
+"border:none\n"
+"}")
+        self.pushButton_Close.setText("")
+        self.pushButton_Close.setFlat(False)
+        self.pushButton_Close.setObjectName("pushButton_Close")
+        self.label_Home_SDLink = QtWidgets.QLabel(self.centralwidget)
+        self.label_Home_SDLink.setGeometry(QtCore.QRect(370, 130, 461, 291))
+        font = QtGui.QFont()
+        font.setFamily("Ebrima")
+        font.setPointSize(80)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label_Home_SDLink.setFont(font)
+        self.label_Home_SDLink.setStyleSheet("QLabel{\n"
+"    font: \"Segoe UI Emoji\";\n"
+"    color:  rgb(255, 255, 255);\n"
+"}")
+        self.label_Home_SDLink.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_Home_SDLink.setObjectName("label_Home_SDLink")
+        self.label_MainBackGround.raise_()
+        self.label_SideBackGround.raise_()
+        self.verticalLayoutWidget.raise_()
+        self.pushButton_Close.raise_()
+        self.label_Home_SDLink.raise_()
+        MainWindow_SDLink.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(MainWindow_SDLink)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow_SDLink)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, MainWindow_SDLink):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-
+        MainWindow_SDLink.setWindowTitle(_translate("MainWindow_SDLink", "MainWindow"))
+        self.label_Home_SDLink.setText(_translate("MainWindow_SDLink", "SD Link"))
+import ButtonResource_rc
